@@ -48,7 +48,7 @@ class WayForPay extends Simpla
         $productPrices = array();
         foreach ($purchases as $purchase) {
             $productNames[] = trim($purchase->product_name . ' ' . $purchase->variant_name);
-            $productPrices[] = $this->money->convert($purchase->price, $payment_method->currency_id, false)-0.10;
+            $productPrices[] = $this->money->convert($purchase->price, $payment_method->currency_id, false);
             $productQty[] = $purchase->amount;
         }
 
