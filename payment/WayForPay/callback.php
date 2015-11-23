@@ -29,9 +29,6 @@ $keysForSignature = array(
 $order_parse = !empty($data['orderReference']) ? explode('#', $data['orderReference']) : null;
 if (is_array($order_parse)) {
     $order_id = $order_parse[0];
-    if (count($order_id) > 1) {
-        $order_id = $order_parse[0];
-    }
 } else {
     $order_id = $order_parse;
 }
