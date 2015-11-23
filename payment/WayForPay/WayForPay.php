@@ -55,7 +55,7 @@ class WayForPay extends Simpla
 
         $option = array();
         $option['merchantAccount'] = $settings['wayforpay_merchant'];
-        $option['orderReference'] = $order->id;
+        $option['orderReference'] = $order->id.'#'.time();
         $option['orderDate'] = strtotime($order->date);
         $option['merchantAuthType'] = 'simpleSignature';
         $option['merchantDomainName'] = $_SERVER['HTTP_HOST'];
