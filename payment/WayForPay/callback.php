@@ -68,7 +68,8 @@ if (!empty($data["merchantSignature"]) && $data["merchantSignature"] != $sign) {
 $time = time();
 
 $responseToGateway = array(
-    'orderReference' => $order->id,
+//    'orderReference' => $order->id,
+    'orderReference' => $data['orderReference'],
     'status' => 'accept',
     'time' => $time
 );
